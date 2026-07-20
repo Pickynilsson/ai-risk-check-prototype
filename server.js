@@ -1,9 +1,13 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
 import { GoogleGenAI } from "@google/genai";
 
 dotenv.config();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -296,6 +300,21 @@ app.post("/api/generate-product-image", async (request, response) => {
       error: error.message,
     });
   }
+});
+
+app.use(express.static(path.join(__dirname, "dist")));
+
+app.use((request, response, next) => {
+  if (
+    request.method === "GET" &&
+    !request.path.startsWith("/api/")
+  ) {
+    return response.sendFile(
+      path.join(__dirname, "dist", "index.html")
+    );
+  }
+
+  next();
 });
 
 app.listen(PORT, () => {

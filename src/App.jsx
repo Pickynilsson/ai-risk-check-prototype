@@ -79,7 +79,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://localhost:3001/api/analyze-product",
+        "/api/analyze-product",
         {
           method: "POST",
           headers: {
@@ -216,7 +216,7 @@ function App() {
         onFinished={async () => {
           try {
             const response = await fetch(
-              "http://localhost:3001/api/analyze-product-image",
+              "/api/analyze-product-image",
               {
                 method: "POST",
                 headers: {

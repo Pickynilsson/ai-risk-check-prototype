@@ -1,0 +1,112 @@
+.ai-status-page {
+  min-height: 100vh;
+  background: #f3f1ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.ai-status-card {
+  width: 100%;
+  max-width: 760px;
+  background: white;
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  text-align: center;
+}
+
+.ai-status-back-button{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-size:17px;
+  margin-bottom:35px;
+}
+
+.ai-status-icon{
+  width:90px;
+  height:90px;
+  margin:0 auto 24px;
+  border-radius:50%;
+  background:#ede9ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#654ee7;
+}
+
+.ai-status-label{
+  display:inline-block;
+  background:#654ee7;
+  color:white;
+  padding:6px 16px;
+  border-radius:999px;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.ai-status-card h1{
+  font-size:32px;
+  margin-bottom:16px;
+}
+
+.ai-status-product{
+  margin-bottom:25px;
+  color:#666;
+}
+
+.ai-status-message{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  background:#fff7eb;
+  border:1px solid #ffd38d;
+  border-radius:14px;
+  padding:18px;
+  margin:30px 0;
+  text-align:left;
+}
+
+.ai-status-suggestion{
+  background:#f6f6ff;
+  border-radius:14px;
+  padding:22px;
+  margin-bottom:35px;
+}
+
+.ai-status-suggestion h2{
+  margin-bottom:10px;
+}
+
+.ai-status-actions{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.ai-status-actions button{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border:none;
+  cursor:pointer;
+  padding:14px 26px;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:600;
+}
+
+.ai-status-actions button:first-child{
+  background:#654ee7;
+  color:white;
+}
+
+.ai-status-actions button:last-child{
+  background:#f3f3f3;
+}

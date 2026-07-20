@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" role="img" aria-labelledby="title">
+<title>Google Shopping</title>
+<rect width="520" height="140" rx="20" fill="white"/>
+<path d="M54 34h66c9 0 16 7 16 16v57c0 9-7 16-16 16H54c-9 0-16-7-16-16V50c0-9 7-16 16-16z" fill="#4285F4"/>
+<path d="M70 34h50c9 0 16 7 16 16v14H70z" fill="#34A853"/>
+<path d="M38 72h98v35c0 9-7 16-16 16H54c-9 0-16-7-16-16z" fill="#FBBC05"/>
+<circle cx="87" cy="79" r="15" fill="white"/>
+<text x="165" y="86" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="600">
+<tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan>
+<tspan fill="#3c4043"> Shopping</tspan>
+</text>
+</svg>

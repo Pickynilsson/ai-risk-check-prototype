@@ -1,0 +1,239 @@
+.risk-card-page {
+  min-height: 100vh;
+  padding: 42px 20px;
+  background: #f3f1ff;
+}
+
+.risk-card-container {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.risk-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.risk-back-button,
+.risk-save-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #494953;
+  cursor: pointer;
+}
+
+.risk-save-top {
+  font-size: 13px;
+}
+
+.risk-subtitle {
+  margin: 12px 0 26px;
+  color: #6a6875;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.risk-product-card,
+.risk-assessment-card,
+.risk-insights-card,
+.review-summary-card,
+.risk-source-summary {
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 10px 28px rgba(38, 33, 90, 0.12);
+}
+
+.risk-product-card {
+  display: flex;
+  align-items: flex-end;
+  gap: 26px;
+  padding: 24px;
+}
+
+.risk-product-card img {
+  width: 150px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.risk-product-card p {
+  margin: 8px 0;
+}
+
+.risk-assessment-card {
+  overflow: hidden;
+}
+
+.risk-level-block {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  padding: 24px;
+  background: linear-gradient(135deg, #ffbf00, #ffd960);
+}
+
+.risk-level-block h2,
+.risk-level-block p {
+  margin-top: 0;
+}
+
+.risk-level-block p:last-child {
+  margin-bottom: 0;
+  line-height: 1.55;
+}
+
+.risk-warning-icon {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.35);
+  color: white;
+}
+
+.risk-reason-block {
+  padding: 24px;
+}
+
+.risk-reason-block h3,
+.risk-insights-card h3,
+.review-summary-card h3,
+.risk-source-summary h3 {
+  margin-top: 0;
+}
+
+.risk-reason-block ul,
+.risk-insights-card ul,
+.risk-source-summary ul {
+  margin-bottom: 0;
+  padding-left: 22px;
+  line-height: 1.65;
+}
+
+.risk-insights-card,
+.risk-source-summary {
+  padding: 24px;
+}
+
+.review-summary-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.review-summary-text p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.review-chart {
+  display: grid;
+  width: 150px;
+  height: 150px;
+  place-items: center;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ffc229 0 72%,
+    #5a5a66 72% 82%,
+    #ff5a6c 82% 100%
+  );
+}
+
+.review-chart-hole {
+  display: grid;
+  width: 82px;
+  height: 82px;
+  place-items: center;
+  border-radius: 50%;
+  background: white;
+  font-weight: 700;
+}
+
+.view-sources-link {
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #684ee8;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.risk-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.risk-actions button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 12px;
+  background: #ffc229;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.risk-actions button:last-child {
+  background: #684ee8;
+  color: white;
+}
+
+.risk-actions button:hover,
+.view-sources-link:hover,
+.risk-back-button:hover,
+.risk-save-top:hover {
+  transform: translateY(-2px);
+}
+
+.risk-actions button:hover {
+  box-shadow: 0 8px 18px rgba(48, 38, 120, 0.16);
+}
+
+@media (max-width: 700px) {
+  .risk-card-page {
+    padding: 24px 14px;
+  }
+
+  .risk-product-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .risk-level-block {
+    grid-template-columns: 1fr;
+  }
+
+  .risk-warning-icon {
+    margin: 0 auto;
+  }
+
+  .review-summary-card {
+    grid-template-columns: 1fr;
+  }
+
+  .review-chart {
+    margin: 0 auto;
+  }
+
+  .risk-actions {
+    flex-direction: column;
+  }
+}

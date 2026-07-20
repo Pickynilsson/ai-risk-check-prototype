@@ -1,0 +1,75 @@
+.analysis-process-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 40px;
+  background: radial-gradient(
+    circle at center,
+    #071454 0%,
+    #02072d 55%,
+    #01051e 100%
+  );
+  color: white;
+}
+
+.analysis-process-card {
+  width: min(720px, calc(100% - 40px));
+  text-align: center;
+}
+
+.analysis-spinner {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+  border: 5px solid rgba(255,255,255,0.18);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: analysis-spin 0.9s linear infinite;
+}
+
+.analysis-process-card h1 {
+  min-height: 78px;
+  margin: 38px 0 42px;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.analysis-progress-track {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+}
+
+.analysis-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: white;
+  transition: width .45s ease;
+}
+
+.analysis-process-card p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@keyframes analysis-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 700px) {
+
+  .analysis-process-page {
+    padding: 24px;
+  }
+
+  .analysis-process-card h1 {
+    font-size: 22px;
+  }
+
+}

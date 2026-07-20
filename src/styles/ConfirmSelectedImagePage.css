@@ -1,0 +1,135 @@
+.confirm-image-page {
+  min-height: 100vh;
+  background: #e9eaec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 20px;
+}
+
+.confirm-image-card {
+  width: 100%;
+  max-width: 760px;
+  background: #f7f7f8;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+}
+
+.confirm-image-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 24px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #202124;
+}
+
+.confirm-image-back:hover {
+  opacity: 0.7;
+}
+
+.confirm-image-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.confirm-image-label {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  color: #6b7280;
+}
+
+.confirm-image-header h1 {
+  margin: 0 0 10px;
+  font-size: 34px;
+  color: #17181a;
+}
+
+.confirm-image-header p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.confirm-image-preview {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.confirm-image-preview img {
+  width: 100%;
+  max-width: 430px;
+  border-radius: 18px;
+  border: 1px solid #d7d7d7;
+  background: white;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+.confirm-image-file-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  color: #444;
+  font-size: 15px;
+}
+
+.confirm-image-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.confirm-image-secondary-button,
+.confirm-image-primary-button {
+  flex: 1;
+  border: none;
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.confirm-image-secondary-button {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.confirm-image-secondary-button:hover {
+  background: #d8dbe0;
+}
+
+.confirm-image-primary-button {
+  background: #17181a;
+  color: white;
+}
+
+.confirm-image-primary-button:hover {
+  background: black;
+}
+
+@media (max-width:700px) {
+
+  .confirm-image-card {
+    padding: 24px;
+  }
+
+  .confirm-image-header h1 {
+    font-size: 28px;
+  }
+
+  .confirm-image-actions {
+    flex-direction: column;
+  }
+
+}

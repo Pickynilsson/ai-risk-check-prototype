@@ -525,9 +525,17 @@ function App() {
         savedAnalyses={savedAnalyses}
         onBack={() => setCurrentPage("home")}
         onNewSearch={() => setCurrentPage("home")}
-        onViewAnalysis={() =>
-          setCurrentPage("riskCard")
-        }
+        onViewAnalysis={(analysis) => {
+          const matchedProduct = mockProducts.find(
+            (product) => product.id === analysis.productId
+          );
+        
+          if (matchedProduct) {
+            setSelectedProduct(matchedProduct);
+          }
+        
+          setCurrentPage("riskCard");
+        }}
         onDelete={(id) => {
           setSavedAnalyses((previousAnalyses) =>
             previousAnalyses.filter(

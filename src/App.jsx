@@ -60,92 +60,88 @@ function App() {
 }, [savedAnalyses]);
 
   const handleSearch = async (name) => {
-    const cleanName = name.trim();
+  const cleanName = name.trim();
 
-    if (!cleanName) return;
+  if (!cleanName) return;
 
-    const foundMockProduct = mockProducts.find(
-      (product) =>
-        product.name.toLowerCase() === cleanName.toLowerCase()
-    );
+  const foundMockProduct = mockProducts.find(
+    (product) =>
+      product.name.toLowerCase() === cleanName.toLowerCase()
+  );
 
-    if (foundMockProduct) {
-      setProductName(foundMockProduct.name);
-      setSelectedProduct(foundMockProduct);
-      setAIAnalysis(null);
+  if (foundMockProduct) {
+    setProductName(foundMockProduct.name);
+    setSelectedProduct(foundMockProduct);
+    setAIAnalysis(null);
+    setCurrentPage("searchByName");
+    return;
+  }
+
+  try {
+    const response = await fetch("/api/analyze-product", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        productName: cleanName,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      throw new Error(
+        data.error || "AI-sökningen misslyckades."
+      );
+    }
+
+    const aiProduct = {
+      id: `ai-${Date.now()}`,
+      name: data.analysis.productName || cleanName,
+      category:
+        data.analysis.category || "Okänd produktkategori",
+      isMainProduct: false,
+      image: null,
+      imagePrompt: data.analysis.imagePrompt || "",
+      analysisStatus:
+        data.analysis.status || "insufficient-data",
+      aiSummary: data.analysis.summary || "",
+      aiLimitations: data.analysis.limitations || "",
+    };
+
+    if (data.analysis.status === "unknown-product") {
+      const unknownProduct = {
+        ...aiProduct,
+        name: cleanName,
+        category: "",
+        image: null,
+        imagePrompt: "",
+        analysisStatus: "unknown-product",
+      };
+
+      setProductName(cleanName);
+      setSelectedProduct(unknownProduct);
+      setAIAnalysis(data.analysis);
+      setAIStatus("unknown-product");
       setCurrentPage("searchByName");
       return;
     }
 
-    try {
-      const response = await fetch(
-        "/api/analyze-product",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            productName: cleanName,
-            category: "",
-          }),
-        }
-      );
+    setProductName(aiProduct.name);
+    setSelectedProduct(aiProduct);
+    setAIAnalysis(data.analysis);
+    setCurrentPage("searchByName");
+  } catch (error) {
+    console.error("AI product search error:", error);
 
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(
-          data.error || "AI-sökningen misslyckades."
-        );
-      }
-
-      const aiProduct = {
-        id: `ai-${Date.now()}`,
-        name: data.analysis.productName || cleanName,
-        category:
-          data.analysis.category || "Okänd produktkategori",
-        isMainProduct: false,
-        image: null,
-        imagePrompt: data.analysis.imagePrompt || "",
-        analysisStatus:
-          data.analysis.status || "insufficient-data",
-        aiSummary: data.analysis.summary || "",
-        aiLimitations: data.analysis.limitations || "",
-      };
-
-      if (data.analysis.status === "unknown-product") {
-        const unknownProduct = {
-          ...aiProduct,
-          name: cleanName,
-          category: "",
-          image: null,
-          imagePrompt: "",
-          analysisStatus: "unknown-product",
-        };
-
-        setProductName(cleanName);
-        setSelectedProduct(unknownProduct);
-        setAIAnalysis(data.analysis);
-        setAIStatus("unknown-product");
-        setCurrentPage("searchByName");
-        return;
-      }
-
-      setProductName(aiProduct.name);
-      setSelectedProduct(aiProduct);
-      setAIAnalysis(data.analysis);
-      setCurrentPage("searchByName");
-    } catch (error) {
-      console.error("AI product search error:", error);
-
-      setProductName(cleanName);
-      setSelectedProduct(null);
-      setAIAnalysis(null);
-      setAIStatus("api-unavailable");
-      setCurrentPage("aiStatus");
-    }
-  };
+    setProductName(cleanName);
+    setSelectedProduct(null);
+    setAIAnalysis(null);
+    setAIStatus("api-unavailable");
+    setCurrentPage("aiStatus");
+  }
+};
 
   if (currentPage === "imageSourceChoice") {
     return (

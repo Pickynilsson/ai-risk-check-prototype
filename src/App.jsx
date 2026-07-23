@@ -472,6 +472,7 @@ function App() {
         onSaveAnalysis={() => {
           const newAnalysis = {
             id: Date.now(),
+            productId: activeProduct.id,
             productName: activeProduct.name,
             productType: activeProduct.category,
             riskLevel:

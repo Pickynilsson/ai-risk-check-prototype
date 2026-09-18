@@ -72,6 +72,10 @@
   text-align:left;
 }
 
+.ai-status-message p {
+  line-height: 1.5;
+}
+
 .ai-status-suggestion{
   background:#f6f6ff;
   border-radius:14px;

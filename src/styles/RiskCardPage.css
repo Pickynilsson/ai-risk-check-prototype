@@ -43,6 +43,7 @@
 .risk-assessment-card,
 .risk-insights-card,
 .review-summary-card,
+.risk-focus-card,
 .risk-source-summary {
   margin-bottom: 18px;
   border-radius: 18px;
@@ -97,6 +98,16 @@
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.35);
   color: white;
+}
+
+.risk-scope-note {
+  margin: 0;
+  padding: 16px 24px;
+  border-bottom: 1px solid #ece9fa;
+  background: #faf9ff;
+  color: #5f5b70;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .risk-reason-block {
@@ -159,6 +170,218 @@
   border-radius: 50%;
   background: white;
   font-weight: 700;
+}
+
+/* USER AGENCY - MITT FOKUS */
+
+.risk-focus-card {
+  padding: 26px;
+  border: 1px solid #e4dffd;
+}
+
+.risk-focus-header h3 {
+  margin: 0 0 8px;
+  color: #2f2b43;
+  font-size: 22px;
+}
+
+.risk-focus-header > p {
+  margin: 0;
+  color: #5f5b70;
+  line-height: 1.55;
+}
+
+.risk-focus-explanation {
+  margin-top: 12px !important;
+  padding: 13px 15px;
+  border-left: 4px solid #684ee8;
+  border-radius: 0 10px 10px 0;
+  background: #f5f2ff;
+  color: #514b69 !important;
+  font-size: 14px;
+}
+
+.risk-focus-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.risk-focus-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 76px;
+  padding: 14px;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  background: #f8f7fc;
+  color: #35323f;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.risk-focus-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(48, 38, 120, 0.12);
+}
+
+.risk-focus-rank {
+  display: grid;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.risk-focus-option-text {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.risk-focus-option-text strong {
+  line-height: 1.3;
+}
+
+.risk-focus-option-text small {
+  color: #6a6875;
+  font-size: 12px;
+}
+
+.risk-focus-rank-1 .risk-focus-rank {
+  background: #e85662;
+}
+
+.risk-focus-rank-2 .risk-focus-rank {
+  background: #e58a38;
+}
+
+.risk-focus-rank-3 .risk-focus-rank {
+  background: #c4a02d;
+}
+
+.risk-focus-rank-4 .risk-focus-rank {
+  background: #7767c7;
+}
+
+.risk-focus-option.selected {
+  border-color: #684ee8;
+  background: #f1edff;
+  box-shadow: 0 7px 18px rgba(104, 78, 232, 0.14);
+}
+
+.risk-focus-frequency-note {
+  margin: 14px 2px 0;
+  color: #777382;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* EXPANDED AREA */
+
+.risk-focus-details {
+  margin-top: 22px;
+  padding: 22px;
+  border: 1px solid #ddd6ff;
+  border-radius: 16px;
+  background: #fbfaff;
+}
+
+.risk-focus-data-note {
+  margin-bottom: 22px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #eeeaff;
+  color: #4e4864;
+}
+
+.risk-focus-data-note strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #3e3760;
+}
+
+.risk-focus-data-note p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.risk-focus-details > h3 {
+  margin: 0 0 20px;
+  color: #342d58;
+  font-size: 21px;
+}
+
+.risk-focus-detail-section {
+  padding: 15px 0;
+  border-top: 1px solid #e8e4f5;
+}
+
+.risk-focus-detail-section h4 {
+  margin: 0 0 7px;
+  color: #494358;
+  font-size: 14px;
+}
+
+.risk-focus-detail-section p {
+  margin: 0;
+  color: #34313c;
+  line-height: 1.55;
+}
+
+.risk-focus-detail-section strong {
+  color: #342d58;
+}
+
+.risk-focus-user-note {
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #fff7df;
+  color: #514a37;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.risk-focus-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.risk-focus-actions button {
+  padding: 11px 16px;
+  border: 1px solid #684ee8;
+  border-radius: 10px;
+  background: white;
+  color: #684ee8;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.risk-focus-actions button:last-child {
+  background: #684ee8;
+  color: white;
+}
+
+.risk-focus-actions button:hover {
+  transform: translateY(-2px);
 }
 
 .view-sources-link {
@@ -231,6 +454,26 @@
 
   .review-chart {
     margin: 0 auto;
+  }
+
+  .risk-focus-card {
+    padding: 20px;
+  }
+
+  .risk-focus-options {
+    grid-template-columns: 1fr;
+  }
+
+  .risk-focus-details {
+    padding: 18px;
+  }
+
+  .risk-focus-actions {
+    flex-direction: column;
+  }
+
+  .risk-focus-actions button {
+    width: 100%;
   }
 
   .risk-actions {

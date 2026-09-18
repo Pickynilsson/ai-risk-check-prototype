@@ -101,7 +101,7 @@ const fragranceProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Doftupplevelser påverkas av hudtyp, miljö och individuella preferenser",
         "En användarrecension kan innehålla mer än ett identifierat problem",
         "Risknivån visar återkommande mönster och gäller inte varje enskild produkt",
@@ -115,6 +115,17 @@ const fragranceProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+      
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 906,
       problemMentionCount: 172,
@@ -123,18 +134,21 @@ const fragranceProductData = {
         {
           source: "Sephora",
           sourceType: "Beauty retailer",
+          dataStatus: "simulated",
           reviewCount: 386,
           problemMentions: 73,
         },
         {
           source: "KICKS",
           sourceType: "Beauty retailer",
+          dataStatus: "simulated",
           reviewCount: 298,
           problemMentions: 56,
         },
         {
           source: "Google Shopping",
           sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 222,
           problemMentions: 43,
         },
@@ -227,7 +241,7 @@ const fragranceProductData = {
         ],
 
         limitations: [
-        "Analysen bygger på simulerade partnerdata för prototypen",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Doftupplevelser är subjektiva och varierar mellan användare",
         "Risknivån beskriver återkommande mönster och inte kvaliteten hos varje enskild produkt",
         ],
@@ -240,6 +254,17 @@ const fragranceProductData = {
 
     dataSources: {
         datasetType: "simulated-partner-data",
+        datasetLabel: "Simulerat analysunderlag",
+
+        datasetDescription:
+          "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+        simulationPurpose:
+          "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+        analysisMethod:
+          "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+        
         analysisPeriod: "Januari–Juni 2026",
         analyzedReviews: 1080,
         problemMentionCount: 184,
@@ -247,16 +272,19 @@ const fragranceProductData = {
         partnerSources: [
         {
             source: "Amazon",
+            dataStatus: "simulated",
             reviewCount: 430,
             problemMentions: 73,
         },
         {
             source: "Google Shopping",
+            dataStatus: "simulated",
             reviewCount: 360,
             problemMentions: 61,
         },
         {
             source: "Trustpilot",
+            dataStatus: "simulated",
             reviewCount: 290,
             problemMentions: 50,
         },
@@ -357,7 +385,7 @@ const fragranceProductData = {
         ],
 
         limitations: [
-            "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+            "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
             "Doftupplevelser är subjektiva och varierar mellan användare",
             "Risknivån beskriver återkommande mönster och inte individuella upplevelser",
         ],
@@ -370,6 +398,17 @@ const fragranceProductData = {
 
         dataSources: {
         datasetType: "simulated-partner-data",
+        datasetLabel: "Simulerat analysunderlag",
+
+        datasetDescription:
+          "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+        simulationPurpose:
+          "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+        analysisMethod:
+          "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+        
         analysisPeriod: "Januari–Juni 2026",
         analyzedReviews: 1410,
         problemMentionCount: 141,
@@ -377,16 +416,19 @@ const fragranceProductData = {
         partnerSources: [
             {
             source: "Amazon",
+            dataStatus: "simulated",
             reviewCount: 610,
             problemMentions: 59,
             },
             {
             source: "Google Shopping",
+            dataStatus: "simulated",
             reviewCount: 460,
             problemMentions: 47,
             },
             {
             source: "Trustpilot",
+            dataStatus: "simulated",
             reviewCount: 340,
             problemMentions: 35,
             },
@@ -487,7 +529,7 @@ const fragranceProductData = {
         ],
 
         limitations: [
-            "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+            "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
             "Doftupplevelser varierar mellan olika användare",
             "Risknivån beskriver återkommande mönster och inte individuella upplevelser",
         ],
@@ -500,6 +542,17 @@ const fragranceProductData = {
 
         dataSources: {
         datasetType: "simulated-partner-data",
+        datasetLabel: "Simulerat analysunderlag",
+
+        datasetDescription:
+          "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+        simulationPurpose:
+          "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+        analysisMethod:
+          "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+        
         analysisPeriod: "Januari–Juni 2026",
         analyzedReviews: 1480,
         problemMentionCount: 163,
@@ -507,16 +560,19 @@ const fragranceProductData = {
         partnerSources: [
             {
             source: "Amazon",
+            dataStatus: "simulated",
             reviewCount: 640,
             problemMentions: 71,
             },
             {
             source: "Google Shopping",
+            dataStatus: "simulated",
             reviewCount: 495,
             problemMentions: 55,
             },
             {
             source: "Trustpilot",
+            dataStatus: "simulated",
             reviewCount: 345,
             problemMentions: 37,
             },

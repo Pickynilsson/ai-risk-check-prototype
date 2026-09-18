@@ -86,7 +86,7 @@ const mockAnalyses = {
   ],
 
   limitations: [
-    "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+    "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
     "Omdömenas äkthet och användarnas individuella förutsättningar kan inte verifieras i prototypen",
     "Risknivån beskriver återkommande problem och är inte ett bevis på att varje produkt får dessa problem",
   ],

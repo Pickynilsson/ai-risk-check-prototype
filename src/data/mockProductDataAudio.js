@@ -100,7 +100,7 @@ const audioProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Öronform, mobilmodell och användningsmiljö kan påverka hur problemen upplevs",
         "En användarrecension kan innehålla flera identifierade problem",
         "Risknivån visar återkommande mönster och gäller inte varje enskilt exemplar",
@@ -114,6 +114,17 @@ const audioProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+       "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+       "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+       "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+      
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 1015,
       problemMentionCount: 264,
@@ -122,18 +133,21 @@ const audioProductData = {
         {
           source: "Amazon",
           sourceType: "Marketplace",
+          dataStatus: "simulated",
           reviewCount: 448,
           problemMentions: 118,
         },
         {
           source: "Google Shopping",
           sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 337,
           problemMentions: 87,
         },
         {
           source: "Samsung Community",
           sourceType: "Support community",
+          dataStatus: "simulated",
           reviewCount: 230,
           problemMentions: 59,
         },
@@ -238,7 +252,7 @@ const audioProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Öronform, enhetsmodell, programvaruversion och användningsmiljö kan påverka problemen",
         "En användarrecension kan innehålla flera identifierade problem",
         "Risknivån visar återkommande mönster och gäller inte varje enskilt exemplar",
@@ -252,6 +266,17 @@ const audioProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+      
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 1372,
       problemMentionCount: 288,
@@ -260,18 +285,21 @@ const audioProductData = {
         {
           source: "Amazon",
           sourceType: "Marketplace",
+          dataStatus: "simulated",
           reviewCount: 586,
           problemMentions: 126,
         },
         {
           source: "Google Shopping",
           sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 448,
           problemMentions: 91,
         },
         {
           source: "Apple Support Community",
           sourceType: "Support community",
+          dataStatus: "simulated",
           reviewCount: 338,
           problemMentions: 71,
         },
@@ -372,7 +400,7 @@ const audioProductData = {
         ],
 
         limitations: [
-            "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+            "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
             "Användarupplevelsen varierar mellan olika personer",
             "Risknivån beskriver återkommande mönster och inte individuella upplevelser",
         ],
@@ -385,6 +413,17 @@ const audioProductData = {
 
         dataSources: {
         datasetType: "simulated-partner-data",
+        datasetLabel: "Simulerat analysunderlag",
+
+        datasetDescription:
+          "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+        simulationPurpose:
+          "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+        analysisMethod:
+          "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+        
         analysisPeriod: "Januari–Juni 2026",
         analyzedReviews: 2010,
         problemMentionCount: 201,
@@ -392,16 +431,19 @@ const audioProductData = {
         partnerSources: [
             {
             source: "Amazon",
+            dataStatus: "simulated",
             reviewCount: 890,
             problemMentions: 92,
             },
             {
             source: "Google Shopping",
+             dataStatus: "simulated",
             reviewCount: 670,
             problemMentions: 66,
             },
             {
             source: "Trustpilot",
+            dataStatus: "simulated",
             reviewCount: 450,
             problemMentions: 43,
             },

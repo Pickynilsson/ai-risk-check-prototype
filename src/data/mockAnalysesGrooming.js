@@ -102,7 +102,7 @@ const groomingProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Omdömenas äkthet och användarnas individuella förutsättningar kan inte verifieras i prototypen",
         "Risknivån beskriver återkommande problem och är inte ett bevis på att varje produkt får dessa problem",
       ],
@@ -115,6 +115,17 @@ const groomingProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+     
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 1180,
       problemMentionCount: 212,
@@ -123,18 +134,21 @@ const groomingProductData = {
         {
           source: "Amazon",
           sourceType: "Marketplace",
+          dataStatus: "simulated",
           reviewCount: 520,
           problemMentions: 84,
         },
         {
           source: "Google Shopping",
           sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 391,
           problemMentions: 71,
         },
         {
           source: "Trustpilot",
           sourceType: "Review platform",
+          dataStatus: "simulated",
           reviewCount: 269,
           problemMentions: 57,
         },
@@ -239,7 +253,7 @@ const groomingProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Användarnas hudtyp, skäggväxt och rakvanor kan påverka hur problemen upplevs",
         "Risknivån visar återkommande mönster och innebär inte att varje exemplar får samma problem",
       ],
@@ -252,6 +266,17 @@ const groomingProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+      
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 1040,
       problemMentionCount: 239,
@@ -260,18 +285,21 @@ const groomingProductData = {
         {
           source: "Amazon",
           sourceType: "Marketplace",
+          dataStatus: "simulated",
           reviewCount: 460,
           problemMentions: 106,
         },
         {
           source: "Google Shopping",
           sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 350,
           problemMentions: 79,
         },
         {
           source: "Trustpilot",
           sourceType: "Review platform",
+          dataStatus: "simulated",
           reviewCount: 230,
           problemMentions: 54,
         },
@@ -372,7 +400,7 @@ const groomingProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen.",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Enskilda användares tandhälsa kan påverka upplevelsen.",
         "Risknivån beskriver återkommande mönster och inte varje enskild produkt.",
       ],
@@ -385,6 +413,17 @@ const groomingProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+      
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 1032,
       problemMentionCount: 165,
@@ -392,16 +431,22 @@ const groomingProductData = {
       partnerSources: [
         {
           source: "Amazon",
+          sourceType: "Marketplace",
+          dataStatus: "simulated",
           reviewCount: 445,
           problemMentions: 72,
         },
         {
           source: "Google Shopping",
+          sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 332,
           problemMentions: 53,
         },
         {
           source: "Trustpilot",
+          sourceType: "Review platform",
+          dataStatus: "simulated",
           reviewCount: 255,
           problemMentions: 40,
         },
@@ -506,7 +551,7 @@ const groomingProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Användarnas kroppsstorlek, smärtkänslighet och hälsotillstånd kan påverka upplevelsen",
         "Riskbedömningen ersätter inte medicinsk rådgivning och visar endast återkommande användarmönster",
       ],
@@ -519,6 +564,17 @@ const groomingProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+      
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 628,
       problemMentionCount: 195,
@@ -527,18 +583,21 @@ const groomingProductData = {
         {
           source: "Amazon",
           sourceType: "Marketplace",
+          dataStatus: "simulated",
           reviewCount: 286,
           problemMentions: 91,
         },
         {
           source: "Google Shopping",
           sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 207,
           problemMentions: 63,
         },
         {
           source: "Trustpilot",
           sourceType: "Review platform",
+          dataStatus: "simulated",
           reviewCount: 135,
           problemMentions: 41,
         },
@@ -643,7 +702,7 @@ const groomingProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Datamängden är mindre än för flera andra produkter i prototypen",
         "Användarnas hudkänslighet och individuella hälsotillstånd kan påverka upplevelsen",
         "Riskbedömningen ersätter inte medicinsk rådgivning",
@@ -657,6 +716,17 @@ const groomingProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+      
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 286,
       problemMentionCount: 103,
@@ -665,18 +735,21 @@ const groomingProductData = {
         {
           source: "Amazon",
           sourceType: "Marketplace",
+          dataStatus: "simulated",
           reviewCount: 132,
           problemMentions: 51,
         },
         {
           source: "Google Shopping",
           sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 96,
           problemMentions: 33,
         },
         {
           source: "Trustpilot",
           sourceType: "Review platform",
+          dataStatus: "simulated",
           reviewCount: 58,
           problemMentions: 19,
         },
@@ -781,7 +854,7 @@ const groomingProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Hårtyp, hårlängd, fuktighetsnivå och användarteknik kan påverka hur problemen upplevs",
         "En användarrecension kan innehålla flera identifierade problem",
         "Risknivån visar återkommande mönster och gäller inte varje enskilt exemplar",
@@ -795,6 +868,17 @@ const groomingProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+       "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+       "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+       "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+        
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 946,
       problemMentionCount: 246,
@@ -803,18 +887,21 @@ const groomingProductData = {
         {
           source: "Amazon",
           sourceType: "Marketplace",
+          dataStatus: "simulated",
           reviewCount: 398,
           problemMentions: 106,
         },
         {
           source: "Google Shopping",
           sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 314,
           problemMentions: 80,
         },
         {
           source: "Dyson Community",
           sourceType: "Support community",
+          dataStatus: "simulated",
           reviewCount: 234,
           problemMentions: 60,
         },

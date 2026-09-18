@@ -101,7 +101,7 @@ const homeProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Golvtyp, bostadens storlek och valt effektläge kan påverka hur problemen upplevs",
         "En användarrecension kan innehålla flera identifierade problem",
         "Risknivån visar återkommande mönster och gäller inte varje enskilt exemplar",
@@ -115,6 +115,17 @@ const homeProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+      
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 1254,
       problemMentionCount: 301,
@@ -123,18 +134,21 @@ const homeProductData = {
         {
           source: "Amazon",
           sourceType: "Marketplace",
+          dataStatus: "simulated",
           reviewCount: 542,
           problemMentions: 132,
         },
         {
           source: "Google Shopping",
           sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 407,
           problemMentions: 96,
         },
         {
           source: "Dyson Community",
           sourceType: "Support community",
+          dataStatus: "simulated",
           reviewCount: 305,
           problemMentions: 73,
         },
@@ -239,7 +253,7 @@ const homeProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Rummets storlek, temperatur och nätverksmiljö kan påverka hur problemen upplevs",
         "En användarrecension kan innehålla flera identifierade problem",
         "Risknivån visar återkommande mönster och gäller inte varje enskilt exemplar",
@@ -253,6 +267,17 @@ const homeProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 998,
       problemMentionCount: 249,
@@ -261,18 +286,21 @@ const homeProductData = {
         {
           source: "Amazon",
           sourceType: "Marketplace",
+          dataStatus: "simulated",
           reviewCount: 421,
           problemMentions: 108,
         },
         {
           source: "Google Shopping",
           sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 327,
           problemMentions: 80,
         },
         {
           source: "Dyson Community",
           sourceType: "Support community",
+          dataStatus: "simulated",
           reviewCount: 250,
           problemMentions: 61,
         },
@@ -373,7 +401,7 @@ const homeProductData = {
         ],
 
         limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Användarupplevelsen påverkas av hemmets nätverk och övriga Apple-enheter",
         "Risknivån beskriver återkommande mönster och gäller inte varje enskilt exemplar",
         ],
@@ -386,6 +414,17 @@ const homeProductData = {
 
     dataSources: {
         datasetType: "simulated-partner-data",
+        datasetLabel: "Simulerat analysunderlag",
+
+        datasetDescription:
+          "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+        simulationPurpose:
+          "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+        analysisMethod:
+          "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+
         analysisPeriod: "Januari–Juni 2026",
         analyzedReviews: 895,
         problemMentionCount: 171,
@@ -394,18 +433,21 @@ const homeProductData = {
         {
             source: "Amazon",
             sourceType: "Marketplace",
+            dataStatus: "simulated",
             reviewCount: 382,
             problemMentions: 75,
         },
         {
             source: "Google Shopping",
             sourceType: "Shopping comparison",
+            dataStatus: "simulated",
             reviewCount: 303,
             problemMentions: 59,
         },
         {
             source: "Apple Community",
             sourceType: "Support community",
+            dataStatus: "simulated",
             reviewCount: 210,
             problemMentions: 37,
         },
@@ -506,7 +548,7 @@ const homeProductData = {
             ],
 
             limitations: [
-            "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+            "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
             "Användarupplevelsen påverkas av iPhone-modell, watchOS-version och individuella inställningar",
             "Risknivån beskriver återkommande mönster och gäller inte varje enskilt exemplar",
             ],
@@ -519,6 +561,17 @@ const homeProductData = {
 
         dataSources: {
             datasetType: "simulated-partner-data",
+            datasetLabel: "Simulerat analysunderlag",
+
+            datasetDescription:
+              "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+            simulationPurpose:
+              "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+            analysisMethod:
+              "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+            
             analysisPeriod: "Januari–Juni 2026",
             analyzedReviews: 1049,
             problemMentionCount: 199,
@@ -527,18 +580,21 @@ const homeProductData = {
             {
                 source: "Amazon",
                 sourceType: "Marketplace",
+                dataStatus: "simulated",
                 reviewCount: 448,
                 problemMentions: 85,
             },
             {
                 source: "Google Shopping",
                 sourceType: "Shopping comparison",
+                dataStatus: "simulated",
                 reviewCount: 351,
                 problemMentions: 66,
             },
             {
                 source: "Apple Community",
                 sourceType: "Support community",
+                dataStatus: "simulated",
                 reviewCount: 250,
                 problemMentions: 48,
             },

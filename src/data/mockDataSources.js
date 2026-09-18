@@ -4,30 +4,30 @@ const mockDataSources = {
     negativePercent: 18,
     sourceCount: 3,
 
-    summary: [
-      "1 200+ recensioner analyserade",
-      "18% negativa omdömen",
-      "Data baserad på verifierade recensioner och användarupplevelser",
-    ],
+   summary: [
+    "1 200+ simulerade recensioner i analysunderlaget",
+    "18% negativa omdömen i det simulerade underlaget",
+    "Dataunderlaget är simulerat för att demonstrera analysflödet i prototypen",
+  ],
 
     sources: [
       {
         name: "Marketplace",
-        amount: "720 användarrecensioner",
+        amount: "720 simulerade användarrecensioner",
         description:
-          "Vanliga teman: rakresultat, användarvänlighet och bladslitage.",
+          "Simulerat innehåll med teman som rakresultat, användarvänlighet och bladslitage.",
       },
       {
         name: "Forum",
-        amount: "260 foruminlägg",
+        amount: "260 simulerade foruminlägg",
         description:
-          "Diskussioner om batteritid, hållbarhet och användning över tid.",
+          "Simulerade diskussioner om batteritid, hållbarhet och användning över tid.",
       },
       {
         name: "Webbsidor",
-        amount: "260 användaromdömen",
+        amount: "260 simulerade användaromdömen",
         description:
-          "Produktinformation om leverans, tillbehör och produktkvalitet.",
+          "Simulerat innehåll om leverans, tillbehör och produktkvalitet.",
       },
     ],
 
@@ -36,8 +36,8 @@ const mockDataSources = {
       "Bladen behöver ibland flera drag vid längre hårstrån.",
     ],
 
-    note:
-      "Informationen har analyserats utifrån användarrecensioner och tillgängliga datakällor. Resultaten kan variera beroende på användningsområde och personliga preferenser.",
+   note:
+  "Dataunderlaget är simulerat för prototypen och har inte hämtats från de angivna externa källorna. Det används för att visa hur recensioner från olika typer av källor skulle kunna struktureras och analyseras.",
   },
 
   "beauty-neck-ds-8822": {
@@ -46,29 +46,29 @@ const mockDataSources = {
     sourceCount: 3,
 
     summary: [
-      "230 recensioner analyserade",
-      "34% negativa omdömen",
-      "Data baserad på recensioner och information från verifierade källor",
+      "230 simulerade recensioner i analysunderlaget",
+      "34% negativa omdömen i det simulerade underlaget",
+      "Dataunderlaget är simulerat för att demonstrera analysflödet i prototypen",
     ],
 
     sources: [
       {
         name: "Marketplace",
-        amount: "230 användarrecensioner",
+        amount: "230 simulerade användarrecensioner",
         description:
-          "Verifierade användarrecensioner och produktbetyg.",
+          "Simulerat innehåll med användarupplevelser och produktbetyg.",
       },
       {
         name: "Forum",
-        amount: "90 foruminlägg",
+        amount: "90 simulerade foruminlägg",
         description:
-          "Diskussioner om användning och produktupplevelser.",
+          "Simulerade diskussioner om användning och produktupplevelser.",
       },
       {
         name: "Webbsidor",
-        amount: "50 användaromdömen",
+        amount: "50 simulerade användaromdömen",
         description:
-          "Produktinformation och användarrecensioner.",
+          "Simulerat innehåll med produktinformation och användarupplevelser.",
       },
     ],
 
@@ -77,8 +77,8 @@ const mockDataSources = {
       "Effekten känns tillfällig och svår att märka över tid.",
     ],
 
-    note:
-      "Informationen har analyserats utifrån användarrecensioner och tillgängliga datakällor. Resultaten kan variera beroende på datamängd och användarupplevelser.",
+   note:
+     "Dataunderlaget är simulerat för prototypen och har inte hämtats från de angivna externa källorna. Det används för att visa hur recensioner från olika typer av källor skulle kunna struktureras och analyseras.",
   },
 
   "chanel-gabrielle-eau-de-parfum": {
@@ -87,29 +87,29 @@ const mockDataSources = {
     sourceCount: 3,
 
     summary: [
-      "860+ recensioner analyserade",
-      "22% negativa omdömen",
-      "Data baserad på verifierade recensioner och användarupplevelser",
+      "860+ simulerade recensioner i analysunderlaget",
+      "22% negativa omdömen i det simulerade underlaget",
+      "Dataunderlaget är simulerat för att demonstrera analysflödet i prototypen",
     ],
 
     sources: [
       {
         name: "Marketplace",
-        amount: "420 användarrecensioner",
+        amount: "420 simulerade användarrecensioner",
         description:
-          "Vanliga teman: doft, hållbarhet och pris.",
+          "Simulerat innehåll med teman som doft, hållbarhet och pris.",
       },
       {
         name: "Forum",
-        amount: "240 foruminlägg",
+        amount: "240 simulerade foruminlägg",
         description:
-          "Diskussioner om doftprofil, jämförelser och personliga preferenser.",
+          "Simulerade diskussioner om doftprofil, jämförelser och personliga preferenser.",
       },
       {
         name: "Webbsidor",
-        amount: "200 användaromdömen",
+        amount: "200 simulerade användaromdömen",
         description:
-          "Produktinformation om äkthet, leverans och produktkvalitet.",
+          "Simulerat innehåll om äkthet, leverans och produktkvalitet.",
       },
     ],
 
@@ -119,7 +119,7 @@ const mockDataSources = {
     ],
 
     note:
-      "Informationen har analyserats utifrån användarrecensioner och tillgängliga datakällor. Resultaten kan variera beroende på personliga preferenser och användningssituationer.",
+      "Dataunderlaget är simulerat för prototypen och har inte hämtats från de angivna externa källorna. Det används för att visa hur recensioner från olika typer av källor skulle kunna struktureras och analyseras.",
   },
 };
 

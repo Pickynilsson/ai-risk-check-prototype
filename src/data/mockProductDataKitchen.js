@@ -97,7 +97,7 @@ const kitchenProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen.",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Användningsfrekvens och rengöring kan påverka resultaten.",
         "Risknivån beskriver återkommande mönster och inte varje enskild produkt.",
       ],
@@ -110,6 +110,17 @@ const kitchenProductData = {
 
     dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 1148,
       problemMentionCount: 176,
@@ -117,16 +128,19 @@ const kitchenProductData = {
       partnerSources: [
         {
           source: "Amazon",
+          dataStatus: "simulated",
           reviewCount: 505,
           problemMentions: 77,
         },
         {
           source: "Google Shopping",
+          dataStatus: "simulated",
           reviewCount: 371,
           problemMentions: 58,
         },
         {
           source: "Trustpilot",
+          dataStatus: "simulated",
           reviewCount: 272,
           problemMentions: 41,
         },
@@ -231,7 +245,7 @@ const kitchenProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+       "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Portionsstorlek, tillagningstid och rengöringsmetod kan påverka hur problemen uppstår",
         "En användarrecension kan innehålla flera identifierade problem",
         "Risknivån visar återkommande mönster och gäller inte varje enskilt exemplar",
@@ -243,8 +257,19 @@ const kitchenProductData = {
       },
     },
 
-    dataSources: {
+   dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 1196,
       problemMentionCount: 263,
@@ -253,18 +278,21 @@ const kitchenProductData = {
         {
           source: "Amazon",
           sourceType: "Marketplace",
+          dataStatus: "simulated",
           reviewCount: 526,
           problemMentions: 118,
         },
         {
           source: "Google Shopping",
           sourceType: "Shopping comparison",
+          dataStatus: "simulated",
           reviewCount: 394,
           problemMentions: 84,
         },
         {
           source: "Ninja Kitchen Support",
           sourceType: "Support community",
+          dataStatus: "simulated",
           reviewCount: 276,
           problemMentions: 61,
         },
@@ -365,7 +393,7 @@ const kitchenProductData = {
       ],
 
       limitations: [
-        "Analysunderlaget är simulerat för prototypen och har inte hämtats direkt från externa API:er",
+        "Analysunderlaget är simulerat för prototypen. Recensionerna och källfördelningen representerar ett möjligt dataunderlag och har inte hämtats från de angivna externa källorna.",
         "Omdömenas äkthet kan inte verifieras i prototypen",
         "Risknivån beskriver återkommande mönster och innebär inte att varje exemplar får samma problem",
       ],
@@ -376,8 +404,19 @@ const kitchenProductData = {
       },
     },
 
-    dataSources: {
+   dataSources: {
       datasetType: "simulated-partner-data",
+      datasetLabel: "Simulerat analysunderlag",
+
+      datasetDescription:
+        "Recensionsunderlaget är simulerat för prototypen och representerar hur användarrecensioner från flera externa källor skulle kunna samlas in och struktureras före analys.",
+
+      simulationPurpose:
+        "Det simulerade underlaget används för att demonstrera hela analysflödet utan direkt åtkomst till externa recensions-API:er.",
+
+      analysisMethod:
+        "Underlaget struktureras efter återkommande problem, antal omnämnanden och problemens allvarlighetsgrad. Resultat från flera simulerade källor jämförs för att identifiera återkommande mönster som sedan används som underlag för riskbedömningen.",
+
       analysisPeriod: "Januari–Juni 2026",
       analyzedReviews: 1248,
       problemMentionCount: 173,
@@ -385,16 +424,19 @@ const kitchenProductData = {
       partnerSources: [
         {
           source: "Amazon",
+          dataStatus: "simulated",
           reviewCount: 558,
           problemMentions: 76,
         },
         {
           source: "Google Shopping",
+          dataStatus: "simulated",
           reviewCount: 402,
           problemMentions: 56,
         },
         {
           source: "Trustpilot",
+          dataStatus: "simulated",
           reviewCount: 288,
           problemMentions: 41,
         },

@@ -8,7 +8,6 @@ function AnalysisCompletePage({
   onViewSources,
   onViewRiskCard,
 }) {
-
   const partnerSources =
     dataSource?.partnerSources ||
     analysis?.partnerSources ||
@@ -58,6 +57,8 @@ function AnalysisCompletePage({
 
         <p>
           Analysen av "{productName || "vald produkt"}" är klar.
+          <br />
+          Resultatet bygger på prototypens simulerade analysunderlag.
         </p>
 
         <div className="analysis-checklist">
@@ -66,10 +67,11 @@ function AnalysisCompletePage({
           <div>
             <CheckCircle2 size={19} />
 
-         <span>
-            Produktdata har hämtats från {sourceNamesText}.{" "}
-            {analyzedReviews} omdömen har använts i analysen.
-          </span>
+            <span>
+              Det simulerade analysunderlaget representerar
+              källorna {sourceNamesText}. {analyzedReviews} omdömen
+              ingår i underlaget.
+            </span>
           </div>
 
           <div>
@@ -77,7 +79,8 @@ function AnalysisCompletePage({
 
             <span>
               Produkten "{productName || "vald produkt"}" har
-              identifierats och matchats mellan källorna
+              kopplats till det simulerade analysunderlaget i
+              prototypen.
             </span>
           </div>
 
@@ -85,20 +88,21 @@ function AnalysisCompletePage({
             <CheckCircle2 size={19} />
 
             <span>
-              {problemMentionCount} omdömen innehåller minst ett
-              återkommande problem
+              {problemMentionCount} omdömen i det simulerade
+              underlaget innehåller minst ett återkommande problem.
             </span>
           </div>
 
-  <div>
-    <CheckCircle2 size={19} />
+          <div>
+            <CheckCircle2 size={19} />
 
-    <span>
-      Risknivån har beräknats till {riskLevel} med
-      riskpoängen {riskScore} av 100
-    </span>
-  </div>
-</div>
+            <span>
+              Risknivån har beräknats till {riskLevel} med
+              riskpoängen {riskScore} av 100 utifrån det simulerade
+              analysunderlaget.
+            </span>
+          </div>
+        </div>
 
         <div className="analysis-complete-actions">
           <button

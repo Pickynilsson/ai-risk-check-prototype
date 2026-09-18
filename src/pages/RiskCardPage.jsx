@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import {
   AlertTriangle,
   ArrowLeft,
@@ -20,6 +21,27 @@ function RiskCardPage({
 
   const noProblemMentionPercent =
     analysis?.chartData?.noProblemMentionPercent ?? 0;
+
+  const analyzedReviews =
+    analysis?.analyzedReviews ?? 0;
+
+  const recurringProblems = useMemo(() => {
+    return [...(analysis?.recurringProblems || [])].sort(
+      (a, b) => (b.mentions ?? 0) - (a.mentions ?? 0)
+    );
+  }, [analysis]);
+
+  const [selectedProblemId, setSelectedProblemId] =
+    useState(null);
+
+  const selectedProblem = recurringProblems.find(
+    (problem) => problem.id === selectedProblemId
+  );
+
+  const riskScore =
+    analysis?.riskCalculation?.weightedScore ??
+    analysis?.riskScore ??
+    0;
 
   return (
     <main className="risk-card-page">
@@ -80,16 +102,8 @@ function RiskCardPage({
               <h2>Riskbedömning</h2>
 
               <p>
-               <strong>Riskpoäng:</strong>{" "}
-                {analysis?.riskCalculation?.weightedScore ??
-                  analysis?.riskScore ??
-                  0}{" "}
-                av 100
-              </p>
-
-              <p>
                 <strong>Riskpoäng:</strong>{" "}
-                {analysis?.riskScore ?? 0} av 100
+                {riskScore} av 100
               </p>
 
               <p>
@@ -104,6 +118,12 @@ function RiskCardPage({
               </p>
             </div>
           </div>
+
+          <p className="risk-scope-note">
+            Riskpoängen sammanfattar mönster i
+            prototypens simulerade analysunderlag och är
+            inte ett köpbeslut.
+          </p>
 
           <div className="risk-reason-block">
             <h3>❗ Varför denna risk?</h3>
@@ -132,12 +152,14 @@ function RiskCardPage({
 
             <p>
               <strong>{problemPercent}%</strong>{" "}
-              av omdömena innehåller minst ett
-              återkommande problem
+              av det simulerade analysunderlaget innehåller
+              minst ett återkommande problem
             </p>
 
             <p>
-              <strong>{noProblemMentionPercent}%</strong>{" "}
+              <strong>
+                {noProblemMentionPercent}%
+              </strong>{" "}
               innehåller inga identifierade
               problemomnämnanden
             </p>
@@ -147,7 +169,7 @@ function RiskCardPage({
               <strong>
                 {analysis?.problemMentionCount ?? 0}
               </strong>{" "}
-              analyserade omdömen.
+              omdömen i det simulerade analysunderlaget.
             </p>
           </div>
 
@@ -169,13 +191,157 @@ function RiskCardPage({
           </div>
         </section>
 
+        {/* USER AGENCY */}
+        {recurringProblems.length > 0 && (
+          <section className="risk-focus-card">
+            <div className="risk-focus-header">
+             <h3>
+               Vilket riskområde för den här produkten är viktigast för dig?
+             </h3>
+
+             <p>
+               Välj vilket riskområde för produkten du vill granska
+               närmare utifrån dina egna behov och prioriteringar.
+             </p>
+
+              <p className="risk-focus-explanation">
+                Riskpoängen ändras inte av ditt val. Du väljer
+                själv vilket område du vill undersöka närmare
+                innan du fattar ditt köpbeslut.
+              </p>
+            </div>
+
+            <div className="risk-focus-options">
+              {recurringProblems.map((problem, index) => (
+                <button
+                  key={problem.id}
+                  type="button"
+                  className={`risk-focus-option risk-focus-rank-${
+                    index + 1
+                  } ${
+                    selectedProblemId === problem.id
+                      ? "selected"
+                      : ""
+                  }`}
+                  onClick={() =>
+                    setSelectedProblemId((current) =>
+                      current === problem.id
+                        ? null
+                        : problem.id
+                    )
+                  }
+                >
+                  <span className="risk-focus-rank">
+                    {index + 1}
+                  </span>
+
+                  <span className="risk-focus-option-text">
+                    <strong>{problem.affectedArea}</strong>
+                    <small>
+                      {problem.percentageOfAnalyzedReviews ??
+                        0}
+                      % av analysunderlaget
+                    </small>
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            <p className="risk-focus-frequency-note">
+              Ordningen visar hur ofta problemen förekommer i
+              det simulerade analysunderlaget. En högre
+              placering betyder inte automatiskt högre
+              allvarlighetsgrad.
+            </p>
+
+            {selectedProblem && (
+              <div className="risk-focus-details">
+                <div className="risk-focus-data-note">
+                  <strong>
+                    Om informationen i denna vy
+                  </strong>
+
+                  <p>
+                    Informationen bygger på prototypens
+                    simulerade analysunderlag. Problem,
+                    förekomst, procentandelar och risknivåer
+                    representerar hur analysen kan presenteras
+                    när du granskar ett valt riskområde.
+                  </p>
+                </div>
+
+                <h3>{selectedProblem.affectedArea}</h3>
+
+                <div className="risk-focus-detail-section">
+                  <h4>
+                    Vad handlar problemen främst om?
+                  </h4>
+
+                  <p>{selectedProblem.issue}</p>
+                </div>
+
+                <div className="risk-focus-detail-section">
+                  <h4>
+                    Hur ofta förekommer problemet?
+                  </h4>
+
+                 <p>
+                   <strong>
+                     {selectedProblem.mentions ?? 0} identifierade
+                     omnämnanden
+                   </strong>{" "}
+                   (
+                   {selectedProblem.percentageOfAnalyzedReviews ??
+                     0}
+                   % av det simulerade analysunderlaget).
+                 </p>
+                </div>
+
+                <div className="risk-focus-detail-section">
+                  <h4>
+                    Risknivå för detta problem
+                  </h4>
+
+                  <p>
+                    <strong>
+                      {selectedProblem.severity || "Ej angiven"}{" "}
+                      RISK
+                    </strong>
+                  </p>
+                </div>
+
+                <p className="risk-focus-user-note">
+                  Du avgör själv hur viktigt detta problem är
+                  för ditt köpbeslut.
+                </p>
+
+                <div className="risk-focus-actions">
+                  <button
+                    type="button"
+                    onClick={onViewSources}
+                  >
+                    Granska datakällor
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={onExploreAlternative}
+                  >
+                    Utforska vidare
+                  </button>
+                </div>
+              </div>
+            )}
+          </section>
+        )}
+
         <section className="risk-source-summary">
           <h3>Analysunderlag</h3>
 
           <ul>
             <li>
-              {analysis?.analyzedReviews ?? 0} recensioner
-              analyserade
+              {analyzedReviews} simulerade recensioner i
+              analysunderlaget
             </li>
 
             <li>
@@ -184,11 +350,8 @@ function RiskCardPage({
             </li>
 
             <li>
-              Riskpoängen beräknades till{" "}
-              {analysis?.riskCalculation?.weightedScore ??
-                analysis?.riskScore ??
-                0}{" "}
-              av 100
+              Riskpoängen beräknades till {riskScore} av 100
+              utifrån det simulerade analysunderlaget
             </li>
           </ul>
 

@@ -9,41 +9,41 @@ import "../styles/AIStatusPage.css";
 
 const statusContent = {
   "insufficient-data": {
-    title: "Otillräckligt analysunderlag",
+    title: "Produkten identifierades – analysunderlag saknas",
     message:
-      "Produkten hittades, men det finns inte tillräckligt med data för att skapa en tillförlitlig riskbedömning.",
+      "AI-funktionen kunde identifiera produkten. Produktidentifieringen är en aktiv AI-funktion. Riskanalysen i prototypen använder däremot ett begränsat simulerat analysunderlag för de produkter som ingår i prototypens dataset. Den här produkten ingår inte i detta underlag och därför skapas ingen riskbedömning.",
     suggestion:
-      "Prova en annan produkt eller gör en ny sökning med ett tydligare produktnamn.",
+      "Prova en produkt som ingår i prototypens analysunderlag eller gör en ny sökning.",
   },
 
   "analysis-failed": {
-    title: "Analysen kunde inte slutföras",
+    title: "Produkten kunde inte identifieras",
     message:
-      "AI kunde inte bearbeta informationen till ett tydligt och tillförlitligt resultat.",
+      "AI-funktionen kunde inte identifiera produkten med tillräcklig säkerhet. Därför kan produkten inte kontrolleras mot prototypens simulerade analysunderlag och ingen riskbedömning genomförs.",
     suggestion:
-      "Försök igen eller välj en annan produkt.",
+      "Kontrollera produktnamnet och försök igen eller sök efter en annan produkt.",
   },
 
   "api-unavailable": {
     title: "AI-tjänsten är tillfälligt otillgänglig",
     message:
-      "Anslutningen till AI-tjänsten kunde inte genomföras just nu.",
+      "Den aktiva AI-funktionen kunde inte nås just nu. Produktidentifieringen kunde därför inte genomföras och prototypens simulerade analysunderlag har inte kontrollerats.",
     suggestion:
-      "Försök igen senare eller använd prototypens simulerade analys.",
+      "Försök igen senare eller välj en produkt från prototypens exempel.",
   },
 
   "uncertain-data": {
-    title: "Underlaget är osäkert",
+    title: "Analysunderlaget är otillräckligt",
     message:
-      "Data hittades, men informationen är för begränsad eller motsägelsefull för en tydlig riskbedömning.",
+      "Produkten kunde identifieras, men det tillgängliga simulerade analysunderlaget är för begränsat eller motsägelsefullt för att prototypen ska skapa en tydlig riskbedömning.",
     suggestion:
-      "Granska datakällorna eller sök efter en annan produktmodell.",
+      "Granska analysunderlaget eller sök efter en annan produkt.",
   },
 
   "image-not-recognized": {
     title: "Produkten kunde inte identifieras",
     message:
-      "AI kunde inte hitta en tydlig produktmatchning i bilden.",
+      "Den aktiva AI-funktionen kunde inte identifiera produkten utifrån informationen i bilden. Produkten kan därför inte kontrolleras mot prototypens simulerade analysunderlag och ingen riskbedömning genomförs.",
     suggestion:
       "Försök med en tydligare bild, visa hela produkten eller sök med produktnamn.",
   },

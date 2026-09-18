@@ -42,14 +42,15 @@ function DataSourcePage({
         <header className="data-source-header">
           <div>
             <span className="data-source-label">
-              Simulerat analysunderlag
+              {dataSource?.datasetLabel ||
+                "Simulerat analysunderlag"}
             </span>
 
             <h1>Datakällor och analysunderlag</h1>
 
             <p>
-              Här visas vilka simulerade partnerkällor AI Risk Check
-              använder för analysen av {product?.name || "produkten"}.
+              Här visas det simulerade analysunderlag som används
+              för analysen av {product?.name || "produkten"}.
             </p>
           </div>
 
@@ -70,7 +71,7 @@ function DataSourcePage({
               <strong>
                 {dataSource?.analyzedReviews ?? 0}
               </strong>
-              recensioner analyserade
+              simulerade recensioner i underlaget
             </span>
           </div>
 
@@ -79,7 +80,7 @@ function DataSourcePage({
 
             <span>
               <strong>{partnerSources.length}</strong>
-              simulerade datakällor
+              representerade datakällor
             </span>
           </div>
 
@@ -96,7 +97,7 @@ function DataSourcePage({
         </section>
 
         <section className="data-source-list">
-          <h2>Partnerkällor</h2>
+          <h2>Representerade partnerkällor</h2>
 
           {partnerSources.map((source) => (
             <article
@@ -114,14 +115,17 @@ function DataSourcePage({
                 </div>
 
                 <span className="data-source-status">
-                  Prototypdata
+                  {source.dataStatus === "simulated"
+                    ? "Prototypdata"
+                    : "Prototypdata"}
                 </span>
               </div>
 
               <p>
-                {source.reviewCount} recensioner analyserades.
-                Av dessa innehöll {source.problemMentions} minst
-                ett identifierat problem.
+                {source.reviewCount} simulerade recensioner
+                representeras i analysunderlaget. Av dessa
+                innehåller {source.problemMentions} minst ett
+                identifierat problem.
               </p>
             </article>
           ))}
@@ -145,7 +149,7 @@ function DataSourcePage({
             </li>
 
             <li>
-              Antal analyserade recensioner:{" "}
+              Antal recensioner i underlaget:{" "}
               {dataSource?.analyzedReviews ?? 0}
             </li>
 
@@ -155,11 +159,26 @@ function DataSourcePage({
             </li>
           </ul>
 
-          <p>
-            Informationen är skapad för prototypen och visar hur
-            AI Risk Check kan samla, jämföra och presentera
-            återkommande problem från flera partnerkällor.
-          </p>
+          {dataSource?.datasetDescription && (
+            <div>
+              <h3>Vad är analysunderlaget?</h3>
+              <p>{dataSource.datasetDescription}</p>
+            </div>
+          )}
+
+          {dataSource?.simulationPurpose && (
+            <div>
+              <h3>Varför används simulerade data?</h3>
+              <p>{dataSource.simulationPurpose}</p>
+            </div>
+          )}
+
+          {dataSource?.analysisMethod && (
+            <div>
+              <h3>Hur fungerar analysen?</h3>
+              <p>{dataSource.analysisMethod}</p>
+            </div>
+          )}
         </section>
 
         <button

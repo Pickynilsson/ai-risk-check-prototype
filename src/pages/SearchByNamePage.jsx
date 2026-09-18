@@ -11,44 +11,44 @@ function SearchProductPage({
   skipProcess = false,
 }) {
   const steps = [
-  {
-    progress: 15,
-    text: `Steg 1: Tar emot sökningen "${
-      productName || "vald produkt"
-    }".`,
-  },
-  {
-    progress: 30,
-    text:
-      "Steg 2: Söker efter matchande produktinformation hos Amazon.",
-  },
-  {
-    progress: 45,
-    text:
-      "Steg 3: Söker efter matchande produktinformation i Google Shopping.",
-  },
-  {
-    progress: 60,
-    text:
-      "Steg 4: Kontrollerar om produkten finns i Trustpilots tillgängliga företags- och omdömesunderlag.",
-  },
-  {
-    progress: 75,
-    text:
-      "Steg 5: Jämför produktnamn, varumärke och kategori mellan partnerkällorna.",
-  },
-  {
-    progress: 90,
-    text:
-      "Steg 6: Kontrollerar om det finns tillräckligt underlag för en AI-baserad riskanalys.",
-  },
-  {
-    progress: 100,
-    text: product
-      ? `Steg 7: Matchningen är klar. Produkten "${product.name}" hittades och kan visas som sökresultat.`
-      : "Steg 7: Sökningen är klar. Inget tillräckligt säkert produktresultat hittades.",
-  },
-];
+    {
+      progress: 15,
+      text: `Steg 1: Tar emot sökningen "${
+        productName || "vald produkt"
+      }".`,
+    },
+    {
+      progress: 30,
+      text:
+        "Steg 2: Kontrollerar först om produktnamnet matchar en produkt som redan finns i prototypen.",
+    },
+    {
+      progress: 45,
+      text:
+        "Steg 3: Om ingen direkt matchning finns används AI för att tolka produktnamn, varumärke och modell.",
+    },
+    {
+      progress: 60,
+      text:
+        "Steg 4: AI försöker identifiera vilken produkt som bäst motsvarar informationen i sökningen.",
+    },
+    {
+      progress: 75,
+      text:
+        "Steg 5: Den identifierade produkten förbereds för kontroll mot prototypens analysunderlag.",
+    },
+    {
+      progress: 90,
+      text:
+        "Steg 6: Prototypen kontrollerar om den identifierade produkten har ett simulerat analysunderlag för riskanalys.",
+    },
+    {
+      progress: 100,
+      text: product
+        ? `Steg 7: Produktidentifieringen är klar. Produkten "${product.name}" kan visas som sökresultat.`
+        : "Steg 7: Sökningen är klar. Ingen tillräckligt säker produktmatchning kunde identifieras.",
+    },
+  ];
 
   const [stepIndex, setStepIndex] = useState(0);
   const [finished, setFinished] = useState(skipProcess);
@@ -101,7 +101,7 @@ function SearchProductPage({
 
               <div>
                 <h1>Sökresultat</h1>
-                <p>Hitta produkter som matchar dina behov</p>
+                <p>Hitta produkter som matchar din sökning</p>
               </div>
             </div>
           </div>

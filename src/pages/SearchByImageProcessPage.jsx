@@ -4,31 +4,31 @@ import "../styles/SearchByImageProcessPage.css";
 const imageSteps = [
   {
     progress: 10,
-    text: "Tar emot och förbereder den valda bilden...",
+    text: "AI-agenten tar emot och förbereder den valda bilden för produktidentifiering.",
   },
   {
     progress: 25,
-    text: "Läser synlig text, produktnamn och varumärke i bilden...",
+    text: "AI-agenten analyserar synlig text, produktnamn och varumärke i bilden.",
   },
   {
     progress: 40,
-    text: "Identifierar logotyp, form, färg och förpackning...",
+    text: "AI-agenten analyserar visuella egenskaper som logotyp, form, färg och förpackning.",
   },
   {
     progress: 55,
-    text: "Fastställer möjlig produktkategori och sammanställer bildens produktegenskaper...",
+    text: "Informationen från bilden sammanställs för att identifiera vilken produkt det kan vara.",
   },
   {
     progress: 70,
-    text: "Söker efter produktinformation i Amazon, Google Shopping och anslutna partnerkällor...",
+    text: "AI-agenten jämför de identifierade egenskaperna för att fastställa en möjlig produktmatchning.",
   },
   {
     progress: 85,
-    text: "Jämför produktegenskaperna från bilden med produktinformationen från datakällorna...",
+    text: "AI-agenten bedömer vilken produkt som bäst motsvarar informationen i bilden.",
   },
   {
     progress: 100,
-    text: "Väljer den mest sannolika produktmatchningen...",
+    text: "Produktidentifieringen är klar. Resultatet skickas vidare för kontroll mot prototypens analysunderlag.",
   },
 ];
 

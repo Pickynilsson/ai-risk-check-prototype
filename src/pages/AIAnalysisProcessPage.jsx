@@ -38,46 +38,46 @@ function AIAnalysisProcessPage({
       (source, index) => ({
         progress: Math.min(20 + index * 10, 50),
 
-        text: `Källa ${index + 1}: Hämtar ${
+        text: `Simulerad källa ${index + 1}: ${
           source.reviewCount ?? 0
         } omdömen från ${
-          source.source || "en partnerkälla"
-        }.`,
+          source.source || "en representerad partnerkälla"
+        } ingår i prototypens analysunderlag.`,
       })
     );
 
     return [
       {
         progress: 10,
-        text: `AI-agenten tar emot produkten "${productName}" och förbereder analysen.`,
+        text: `AI-agenten tar emot produkten "${productName}". Prototypen använder ett simulerat analysunderlag för riskanalysen.`,
       },
 
       ...sourceSteps,
 
       {
         progress: 55,
-        text: `Datainsamlingen är klar. Totalt ${
+        text: `Det simulerade analysunderlaget innehåller totalt ${
           analyzedReviews
-        } omdömen har hämtats från ${
+        } omdömen från ${
           partnerSources.length
-        } partnerkällor.`,
+        } representerade partnerkällor.`,
       },
 
       {
         progress: 65,
         text:
-          "AI-agenten rensar bort dubbletter och organiserar omdömena efter källa, datum och produkt.",
+          "Prototypen demonstrerar hur omdömen kan struktureras efter källa, datum och produkt.",
       },
 
       {
         progress: 75,
         text:
-          "AI-agenten analyserar omdömenas text och grupperar återkommande problem efter typ och frekvens.",
+          "Analysen demonstrerar hur återkommande problem grupperas efter typ och frekvens i det simulerade underlaget.",
       },
 
       {
         progress: 85,
-        text: `Analysen identifierar ${
+        text: `I analysunderlaget finns ${
           problemMentionCount
         } omdömen som innehåller minst ett återkommande problem.`,
       },
@@ -85,20 +85,20 @@ function AIAnalysisProcessPage({
       {
         progress: 92,
         text:
-          "AI-agenten väger samman problemens frekvens, allvarlighetsgrad och överensstämmelse mellan källorna.",
+          "Riskbedömningen bygger på problemens frekvens, allvarlighetsgrad och återkommande mönster i det simulerade underlaget.",
       },
 
       {
         progress: 97,
-        text: `Riskpoängen beräknas till ${riskScore} av 100.`,
+        text: `Riskpoängen i prototypens analys beräknas till ${riskScore} av 100.`,
       },
 
       {
         progress: 100,
-        text: `Analysen är klar. Produkten klassificeras som ${riskLevel} och resultatet förbereds för Risk Card.`,
+        text: `Analysen är klar. Produkten klassificeras som ${riskLevel} utifrån det simulerade analysunderlaget och resultatet förbereds för Risk Card.`,
       },
     ];
-  }, [product, analysis]);
+  }, [product, analysis, dataSource]);
 
   useEffect(() => {
     if (stepIndex >= analysisSteps.length - 1) {
